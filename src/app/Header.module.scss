@@ -2,8 +2,8 @@
     display: flex;
     align-items: center;
 
-    padding-top: 58px;
-    padding-bottom: 50px;
+    padding-top: clamp(1.5rem, 7.1vw - 0.2rem, 3.25rem);
+    padding-bottom: clamp(1.5rem, 7.1vw - 0.2rem, 3.25rem);
 }
 
 .fontselect {

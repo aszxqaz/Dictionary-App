@@ -35,7 +35,7 @@ export const TextInput: React.FC<TextInputProps> = ({
           <Image className={styles.icon} src={icon} alt="Search" />
         ) : null}
       </div>
-      <p className={styles.error} aria-hidden={error === ""}>
+      <p className={`${styles.error} heading-small`} aria-hidden={error === ""}>
         {error}
       </p>
     </div>

@@ -1,11 +1,12 @@
 "use client";
+import link from "@/assets/icons/link.svg";
+import { HorizontalLine } from "@/components/HorizontalLine/HorizontalLine";
 import { DictApiParser } from "@/dictionary-api/DictApiParser";
 import { Word } from "@/dictionary-api/types";
-import { useState } from "react";
-import styles from "./WordDefinition.module.scss";
 import Image from "next/image";
+import { useState } from "react";
 import play from "../assets/icons/play.svg";
-import { HorizontalLine } from "@/components/HorizontalLine/HorizontalLine";
+import styles from "./WordDefinition.module.scss";
 
 type WordDefinitionProps = {
   word: Word;
@@ -24,7 +25,7 @@ export const WordDefinition: React.FC<WordDefinitionProps> = ({ word }) => {
             {parsed.getPhonetic()}
           </div>
         </div>
-        <div>
+        <div className={styles.play}>
           <Image src={play} alt="Play speech" />
         </div>
       </header>
@@ -38,7 +39,9 @@ export const WordDefinition: React.FC<WordDefinitionProps> = ({ word }) => {
           <ul className={`${styles.list} paragraph-medium`}>
             {obj.definitions.map((meaning) => (
               <li className={styles.listitem} key={meaning.definition}>
-                <p className={styles.meaning}>{meaning.definition}</p>
+                <p className={`${styles.meaning} paragraph-medium`}>
+                  {meaning.definition}
+                </p>
                 {meaning.example ? (
                   <q className="text-secondary">{meaning.example}</q>
                 ) : null}
@@ -56,10 +59,13 @@ export const WordDefinition: React.FC<WordDefinitionProps> = ({ word }) => {
         </section>
       ))}
       <HorizontalLine />
-      <div className="paragraph-small mblock-20">
+      <div className={`${styles.sourceFlex} paragraph-small mblock-20`} >
         <span className="text-secondary mr-22">Source</span>
         {parsed.getSourceUrls().map((url) => (
-          <a href={url}>{url}</a>
+          <a href={url} className={styles.sourceLink}>
+            <span>{url}</span>
+            <Image src={link} alt="Link" />
+          </a>
         ))}
       </div>
     </article>

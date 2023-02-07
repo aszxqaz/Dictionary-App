@@ -3,13 +3,18 @@
   align-items: center;
   justify-content: space-between;
 
-  margin-bottom: 40px;
-  margin-top: 40px;
+  margin-bottom: clamp(2rem, 2.5vw + 1.4rem, 2.625rem);
+  margin-top: clamp(1.5rem, 6.6vw - 0.1rem, 3.125rem);
 }
 
 .section {
     margin-top: 40px;
     margin-bottom: 40px;
+}
+
+.play {
+    width: clamp(3rem, 6.9vw + 1.4rem, 4.7rem);
+    height: auto;
 }
 
 .leftside {
@@ -42,4 +47,15 @@
 
 .meaning {
   margin-bottom: 13px;
+}
+
+.sourceFlex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.sourceLink {
+    display: flex;
+    gap: 0.5rem;
 }

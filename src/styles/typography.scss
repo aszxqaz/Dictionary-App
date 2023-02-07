@@ -38,13 +38,15 @@ html[data-font="mono"] {
 }
 
 .paragraph-medium {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: clamp(0.9rem, 0.9vw + 0.7rem, 1.125rem);
+  // font-size: 18px;
+  line-height: 133%;
 }
 
 .heading-small {
-  font-size: 20px;
-  line-height: 24px;
+  font-size: clamp(1rem, 1vw + 0.8rem, 1.25rem);
+  // font-size: 20px;
+  line-height: 120%;
   margin-bottom: 25px;
 }
 
@@ -54,9 +56,10 @@ html[data-font="mono"] {
 }
 
 .heading-large {
-  font-size: 64px;
+  font-size: clamp(2rem, 8.1vw + 0.1rem, 4rem);
+  // font-size: 64px;
   font-weight: 700;
-  line-height: 77px;
+  line-height: 120%;
 }
 
 .bold {
