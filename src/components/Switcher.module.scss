@@ -1,0 +1,44 @@
+.wrapper {
+  position: relative;
+
+  width: var(--switcher-width-default);
+  height: calc(var(--switcher-width-default) / 2);
+
+  background-color: var(--switcher-bg-color);
+  border-radius: 10px;
+
+  cursor: pointer;
+  transition: color 0.15s ease-in-out;
+}
+
+.wrapperOn {
+  background-color: var(--switcher-bg-color-active);
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  --size: calc(var(--switcher-width-default) * 0.35);
+  --offset-x-initial: calc(
+    (var(--switcher-width-default) / 2 - var(--size)) / 2
+  );
+  --offset-x: var(--offset-x-initial);
+
+  width: var(--size);
+  height: var(--size);
+
+  transform: translate(var(--offset-x), -50%);
+
+  background-color: var(--switcher-circle-color);
+  border-radius: 50%;
+
+  transition: transform 0.15s ease-in-out;
+}
+
+.circleOn {
+  --offset-x: calc(
+    var(--switcher-width-default) - var(--size) - var(--offset-x-initial)
+  );
+}

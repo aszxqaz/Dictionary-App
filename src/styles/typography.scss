@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter.woff') format("woff");
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('/fonts/Lora.woff') format("woff");
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('/fonts/Inconsolata.woff') format("woff");
+}
+
+html {
+  --font-family-sans-serif: Inter, sans-serif;
+  --font-family-serif: Lora, serif;
+  --font-family-mono: Inconsolata, monotype;
+
+}
+
+html[data-font="sans-serif"] {
+  font-family: var(--font-family-sans-serif);
+}
+
+html[data-font="serif"] {
+  font-family: var(--font-family-serif);
+}
+
+html[data-font="mono"] {
+  font-family: var(--font-family-mono);
+}
+
+.paragraph-small {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.paragraph-medium {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.heading-small {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.heading-medium {
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.heading-large {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 77px;
+}
