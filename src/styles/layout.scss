@@ -28,3 +28,25 @@ $breakpoint-tablet: 768px;
     --max-width: 740px;
   }
 }
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.mr-22 {
+  margin-right: 22px;
+}
+
+.mblock-20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

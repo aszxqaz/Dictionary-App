@@ -1,5 +1,4 @@
 "use client";
-
 import styles from "./Switcher.module.scss";
 
 type SwitcherProps = {

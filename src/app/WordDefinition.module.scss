@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.leftside {
+  display: flex;
+  flex-direction: column;
+}
+
+.phonetic {
+  color: var(--color-phonetic);
+}
+
+.partOfSpeech {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+    margin-bottom: 35px;
+    margin-top: 40px;
+}
+
+.list {
+  margin-left: 22px;
+}
+
+.listitem {
+  &::marker {
+    font-size: 0.5em;
+  }
+}
+
+.meaning {
+  margin-bottom: 13px;
+}

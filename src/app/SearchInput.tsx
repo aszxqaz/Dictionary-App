@@ -1,5 +1,5 @@
 "use client"
-import { TextInput } from "@/components/TextInput";
+import { TextInput } from "@/components/TextInput/TextInput";
 import { useState } from "react";
 import searchIcon from "../assets/icons/search.svg";
 
@@ -17,7 +17,6 @@ export const SearchInput = () => {
           setWord(t);
         }}
       />
-      <p>dfsdfsdfsdf</p>
     </div>
   );
 };

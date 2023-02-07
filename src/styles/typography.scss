@@ -45,6 +45,7 @@ html[data-font="mono"] {
 .heading-small {
   font-size: 20px;
   line-height: 24px;
+  margin-bottom: 25px;
 }
 
 .heading-medium {
@@ -56,4 +57,16 @@ html[data-font="mono"] {
   font-size: 64px;
   font-weight: 700;
   line-height: 77px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-blue {
+  color: var(--color-blue);
 }

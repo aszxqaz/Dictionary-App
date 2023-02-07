@@ -1,21 +1,25 @@
 import { Word } from "./types";
 
 export class DictApiParser {
-    constructor(private word: Word) {}
+  constructor(private word: Word) {}
 
-    public getPhonetic() {
-        return this.word.phonetic
-    }
+  public getWord() {
+    return this.word.word;
+  }
 
-    public getSoundUrl() {
-        return this.word.phonetics[0].audio
-    }
+  public getPhonetic() {
+    return this.word.phonetic;
+  }
 
-    public getMeanings() {
-        return this.word.meanings
-    }
+  public getSoundUrl() {
+    return this.word.phonetics[0].audio;
+  }
 
-    public getSourceUrls() {
-        return this.word.sourceUrls
-    }
+  public getMeanings() {
+    return this.word.meanings;
+  }
+
+  public getSourceUrls() {
+    return this.word.sourceUrls;
+  }
 }

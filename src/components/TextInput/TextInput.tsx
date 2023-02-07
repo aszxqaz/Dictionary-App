@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./TextInput.module.css";
+import styles from "./TextInput.module.scss";
 import { DetailedHTMLProps, InputHTMLAttributes } from "react";
 
 type TextInputProps = {

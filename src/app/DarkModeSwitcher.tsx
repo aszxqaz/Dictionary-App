@@ -9,7 +9,7 @@ import dynamic from "next/dynamic";
 
 const Switcher = dynamic(
   (() =>
-      import('@/components/Switcher').then(({ Switcher }) => Switcher)) as any,
+      import('@/components/Switcher/Switcher').then(({ Switcher }) => Switcher)) as any,
   { ssr: false }
 ) as any;
 

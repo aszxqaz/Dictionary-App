@@ -1,5 +1,5 @@
 "use client";
-import { Select } from "@/components/Select";
+import { Select } from "@/components/Select/Select";
 import { useState } from "react";
 import styles from "./FontSelect.module.scss";
 

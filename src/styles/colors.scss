@@ -31,6 +31,10 @@ html {
   
   --link-hover: var(--color-blue);
 
+  --color-phonetic: var(--color-blue);
+
+  --text-secondary: hsl(0, 0%, 46%);
+
   &.dark {
     --body-bg: var(--color-gray-900);
     --color: var(--color-white);
@@ -45,3 +49,6 @@ body {
   background: var(--body-bg);
 }
 
+.color-blue {
+  color: var(--color-blue);
+}
