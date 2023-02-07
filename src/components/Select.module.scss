@@ -1,5 +1,12 @@
 .wrapper {
     position: relative;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.title {
+
 }
 
 .pointerWrapper {
@@ -24,6 +31,8 @@
     list-style: none;
     background-color: var(--select-optionslist-bg);
     border-radius: 16px;
+
+    box-shadow: 0 0 20px rgb(0 0 0 / 20%);
 }
 
 .optionsitem {

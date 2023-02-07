@@ -11,13 +11,14 @@ html {
   --color-red: hsl(0, 100%, 66%);
   --color-blue: hsl(274, 82%, 60%);
 
-  --text-input-bg-color-dark: var(--color-gray-800);
-  --text-input-bg-color-light: var(--color-gray-100);
+  // body font color
+  --color:  var(--color-gray-700);
 
-  --text-input-color-light: var(--color-gray-700);
-  --text-input-color-dark: var(--color-white);
+  // input
+  --text-input-bg-color: var(--color-gray-100);
+  --text-input-color: var(--color-gray-700);
 
-  // SWITCHER
+  // switcher
   --switcher-bg-color: hsl(0, 0%, 46%);
   --switcher-bg-color-active: var(--color-blue);
   --switcher-circle-color: var(--color-white);
@@ -25,19 +26,22 @@ html {
 
   --select-optionslist-bg: var(--color-white);
 
-  --body-bg-light: var(--color-white);
-  --body-bg-dark: var(--color-gray-900);
-  --body-bg: var(--body-bg-light);
+  --body-bg: var(--color-white);
 
   
   --link-hover: var(--color-blue);
+
   &.dark {
-    --body-bg: var(--body-bg-dark);
+    --body-bg: var(--color-gray-900);
+    --color: var(--color-white);
+    --text-input-bg-color: var(--color-gray-800);
+    --text-input-color:  var(--color-white);
+    --select-optionslist-bg: var(--color-gray-800);
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: var(--color);
   background: var(--body-bg);
 }
 

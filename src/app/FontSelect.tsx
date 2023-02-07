@@ -1,6 +1,7 @@
 "use client";
 import { Select } from "@/components/Select";
 import { useState } from "react";
+import styles from "./FontSelect.module.scss";
 
 export const FontSelect = () => {
   const values = ["sans-serif", "serif", "mono"];
@@ -14,7 +15,14 @@ export const FontSelect = () => {
   };
   return (
     <Select
-      options={["Sans Serif", "Serif", "Mono"]}
+      options={[
+        {
+          value: "Sans Serif",
+          node: <span className={styles.sansSerif}>Sans Serif</span>,
+        },
+        { value: "Serif", node: <span className={styles.serif}>Serif</span> },
+        { value: "Mono", node: <span className={styles.mono}>Mono</span> },
+      ]}
       selectedOptionIndex={index}
       handleChange={handleChange}
     />
