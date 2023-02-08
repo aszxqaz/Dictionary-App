@@ -6,6 +6,7 @@
 }
 .pointerWrapper {
   display: flex;
+  align-items: center;
   gap: 18px;
   cursor: pointer;
 }
@@ -28,6 +29,17 @@
   border-radius: 16px;
 
   box-shadow: 0 0 20px rgb(0 0 0 / 20%);
+  animation: fadeIn 0.2s ease-in;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .optionsitem {

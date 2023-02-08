@@ -1,12 +1,13 @@
 "use client";
 import link from "@/assets/icons/link.svg";
-import { HorizontalLine } from "@/components/HorizontalLine/HorizontalLine";
+import { HorizontalLine } from "@/components/Lines/Lines";
 import { DictApiParser } from "@/dictionary-api/DictApiParser";
 import { Word } from "@/dictionary-api/types";
 import Image from "next/image";
 import { useState } from "react";
 import play from "../assets/icons/play.svg";
 import styles from "./WordDefinition.module.scss";
+import { PlayButton } from "@/components/PlayButton/PlayButton";
 
 type WordDefinitionProps = {
   word: Word;
@@ -26,7 +27,8 @@ export const WordDefinition: React.FC<WordDefinitionProps> = ({ word }) => {
           </div>
         </div>
         <div className={styles.play}>
-          <Image src={play} alt="Play speech" />
+          {/* <Image src={play} alt="Play speech" /> */}
+          <PlayButton />
         </div>
       </header>
       {parsed.getMeanings().map((obj) => (
@@ -52,17 +54,17 @@ export const WordDefinition: React.FC<WordDefinitionProps> = ({ word }) => {
             <div className="heading-small">
               <span className="text-secondary mr-22">Synonyms</span>
               {obj.synonyms.map((synonym) => (
-                <span className="text-blue bold">{synonym}</span>
+                <span className="text-blue bold" key={synonym}>{synonym}</span>
               ))}
             </div>
           ) : null}
         </section>
       ))}
       <HorizontalLine />
-      <div className={`${styles.sourceFlex} paragraph-small mblock-20`} >
+      <div className={`${styles.sourceFlex} paragraph-small mblock-20`}>
         <span className="text-secondary mr-22">Source</span>
         {parsed.getSourceUrls().map((url) => (
-          <a href={url} className={styles.sourceLink}>
+          <a key={url} href={url} className={styles.sourceLink}>
             <span>{url}</span>
             <Image src={link} alt="Link" />
           </a>

@@ -4,17 +4,18 @@
   justify-content: space-between;
 
   margin-bottom: clamp(2rem, 2.5vw + 1.4rem, 2.625rem);
-  margin-top: clamp(1.5rem, 6.6vw - 0.1rem, 3.125rem);
+  margin-top: clamp(0rem, 12.7vw - 3rem, 3.125rem);
 }
 
 .section {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    --margin-block: clamp(2rem, 2vw + 1.5rem, 2.5rem);
+    margin-top: var(--margin-block);
+    margin-bottom: var(--margin-block);
 }
 
 .play {
-    width: clamp(3rem, 6.9vw + 1.4rem, 4.7rem);
-    height: auto;
+    // width: clamp(3rem, 6.9vw + 1.4rem, 4.7rem);
+    // height: auto;
 }
 
 .leftside {

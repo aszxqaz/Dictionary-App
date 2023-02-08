@@ -1,0 +1,45 @@
+.button {
+  cursor: pointer;
+  circle {
+    fill: var(--play-button-circle-bg-color);
+    transition: fill 0.1s ease-in;
+  }
+  path {
+    fill: var(--play-button-arrow-bg-color);
+    transition: fill 0.1s ease-in;
+  }
+
+  &:hover {
+    circle {
+      fill: var(--play-button-circle-bg-color-active);
+    }
+    path {
+      fill: var(--play-button-arrow-bg-color-active);
+    }
+  }
+}
+
+.active {
+  circle {
+    fill: var(--play-button-circle-bg-color-active) !important;
+  }
+  path {
+    fill: var(--play-button-arrow-bg-color-active) !important;
+  }
+}
+
+// .circle {
+//     fill: var(--play-button-circle-bg-color);
+
+//     &.active {
+//         fill: var(--play-button-circle-bg-color-active);
+//     }
+// }
+
+// .arrow {
+//     fill: var(--play-button-arrow-bg-color);
+
+//     &.active {
+//         fill: var(--play-button-arrow-bg-color-active);
+//     }
+// }

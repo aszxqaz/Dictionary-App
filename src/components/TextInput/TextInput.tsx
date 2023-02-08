@@ -1,6 +1,12 @@
 import Image from "next/image";
 import styles from "./TextInput.module.scss";
-import { DetailedHTMLProps, InputHTMLAttributes } from "react";
+import {
+  DetailedHTMLProps,
+  InputHTMLAttributes,
+  RefObject,
+  useEffect,
+  useRef,
+} from "react";
 
 type TextInputProps = {
   placeholder?: string;
@@ -17,16 +23,32 @@ export const TextInput: React.FC<TextInputProps> = ({
   handleChange,
   ...restProps
 }) => {
+  const inputRef = useRef() as RefObject<HTMLInputElement>;
+
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current?.focus();
+      inputRef.current.value = restProps.value as string;
+    }
+  }, []);
+
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.value = restProps.value as string;
+    }
+  }, [restProps.value]);
+
   return (
     <div>
       <div className={styles.wrapper}>
         <input
+          // autoFocus={true}
+          ref={inputRef}
           className={`${styles.input} ${
             invalid || error ? styles.invalid : ""
           }`}
           style={{ paddingRight: icon ? 20 : undefined }}
           type="text"
-          {...restProps}
           onChange={(e) => {
             handleChange(e.target.value);
           }}

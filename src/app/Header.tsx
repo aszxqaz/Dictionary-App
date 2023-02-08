@@ -3,6 +3,7 @@ import book from "../assets/icons/book.svg";
 import { DarkModeSwitcher } from "./DarkModeSwitcher";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import { VerticalLine } from "@/components/Lines/Lines";
 
 const FontSelect = dynamic(
   (() =>
@@ -19,6 +20,7 @@ export const Header = () => {
       <div className={styles.fontselect}>
         <FontSelect />
       </div>
+      <VerticalLine />
       <DarkModeSwitcher />
     </header>
   );

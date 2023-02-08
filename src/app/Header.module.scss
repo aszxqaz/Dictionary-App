@@ -1,12 +1,14 @@
 .wrapper {
     display: flex;
     align-items: center;
+    gap: 1.5rem;
 
     padding-top: clamp(1.5rem, 7.1vw - 0.2rem, 3.25rem);
     padding-bottom: clamp(1.5rem, 7.1vw - 0.2rem, 3.25rem);
+
+    user-select: none;
 }
 
 .fontselect {
     margin-left: auto;
-    margin-right: 53px;
 }
