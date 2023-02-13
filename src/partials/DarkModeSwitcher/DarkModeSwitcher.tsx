@@ -3,7 +3,7 @@
 import styles from "./DarkModeSwitcher.module.scss";
 // import { Switcher } from "@/components/Switcher";
 import { useEffect, useState } from "react";
-import moon from "../assets/icons/moon.svg";
+import moon from "@/assets/icons/moon.svg";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 

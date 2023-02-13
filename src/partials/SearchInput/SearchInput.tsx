@@ -1,10 +1,10 @@
 "use client";
-import { TextInput } from "@/components/TextInput/TextInput";
 import { useEffect, useState } from "react";
-import searchIcon from "../assets/icons/search.svg";
+import searchIcon from "@/assets/icons/search.svg";
 import { useRouter } from "next/navigation";
 import { useDebounce } from "@/hooks/useDebounce";
 import { useAppContext } from "@/context/ContextProvider";
+import { TextInput } from "@/components/TextInput/TextInput";
 
 type SearchInputProps = {
   initial: string;
@@ -17,15 +17,15 @@ export const SearchInput: React.FC<SearchInputProps> = ({ initial }) => {
 
   const debouncePush = useDebounce((t: string) => {
     console.log(t);
-    router.push(`/${t}`);
+    router.push(`/?word=${t}`);
   }, 500);
 
   return (
-    <div className="container">
+    <div>
       <TextInput
         placeholder="Search for any word..."
         icon={searchIcon}
-        value={queryString}
+        value={queryString || initial}
         handleChange={(t) => {
           setQueryString(t);
           // router.prefetch(`/${t}`);

@@ -1,0 +1,13 @@
+.svg {
+    display: none;
+    
+    @media (min-width: 580px) {
+        display: initial;
+        width: 200px;
+    }
+}
+
+.logo {
+    fill: var(--color);
+    stroke: var(--color);
+}

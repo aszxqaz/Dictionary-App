@@ -4,10 +4,11 @@ import { HorizontalLine } from "@/components/Lines/Lines";
 import { DictApiParser } from "@/dictionary-api/DictApiParser";
 import { Word } from "@/dictionary-api/types";
 import Image from "next/image";
-import { useState } from "react";
-import play from "../assets/icons/play.svg";
+import { Fragment, useState } from "react";
+import play from "@/assets/icons/play.svg";
 import styles from "./WordDefinition.module.scss";
 import { PlayButton } from "@/components/PlayButton/PlayButton";
+import Link from "next/link";
 
 type WordDefinitionProps = {
   word: Word;
@@ -16,7 +17,7 @@ type WordDefinitionProps = {
 export const WordDefinition: React.FC<WordDefinitionProps> = ({ word }) => {
   const [parsed] = useState(new DictApiParser(word));
   return (
-    <article className="container">
+    <article>
       <header className={styles.header}>
         <div className={styles.leftside}>
           <div className={`${styles.heading} heading-large`}>
@@ -54,7 +55,10 @@ export const WordDefinition: React.FC<WordDefinitionProps> = ({ word }) => {
             <div className="heading-small">
               <span className="text-secondary mr-22">Synonyms</span>
               {obj.synonyms.map((synonym) => (
-                <span className="text-blue bold" key={synonym}>{synonym}</span>
+                <span className="text-blue bold" key={synonym}>
+                  <Link href={`/${synonym}`}>{synonym}</Link>
+                  ,{" "}
+                </span>
               ))}
             </div>
           ) : null}

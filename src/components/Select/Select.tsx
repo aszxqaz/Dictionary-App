@@ -1,3 +1,4 @@
+"use client"
 import styles from "./Select.module.scss";
 import arrow from "@/assets/icons/arrow_down.svg";
 import Image from "next/image";

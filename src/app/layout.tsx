@@ -1,7 +1,6 @@
 import { AppContextProvider } from "@/context/ContextProvider";
 import "../styles/main.scss";
-import { Header } from "./Header";
-import { ThemeScript } from "./ThemeScript";
+import { Header } from "@/partials/Header/Header";
 
 export default function RootLayout({
   children,
@@ -12,7 +11,7 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body>
-        <ThemeScript />
+        <script src="./theme.js" />
         <AppContextProvider>
           <Header />
           {children}
@@ -21,3 +20,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+// export const ThemeScript = () => <script src="./theme.js" />;
