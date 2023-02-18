@@ -11,7 +11,7 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body>
-        <script src="./theme.js" />
+        <script src="./preferences.js" />
         <AppContextProvider>
           <Header />
           {children}

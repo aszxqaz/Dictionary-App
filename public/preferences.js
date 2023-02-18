@@ -19,5 +19,3 @@ if (["sans-serif", "serif", "mono"].includes(font)) {
   localStorage.setItem("font", "sans-serif");
   document.documentElement.dataset["font"] = "sans-serif"
 }
-
-console.log(font)
