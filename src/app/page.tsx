@@ -27,7 +27,7 @@ export default async function Home({
 			<div style={{ display: 'flex' }}>
 				<QueryModeRadios />
 			</div>
-			{JSON.stringify(data, null, 2)}
+			{JSON.stringify(searchParams, null, 2)}
 			{data && '0' in data && data[0] ? (
 				<WordDefinition word={data[0]} />
 			) : (
