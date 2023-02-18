@@ -4,6 +4,8 @@ import { QueryModeRadios } from '@/partials/QueryModeRadios/QueryModeRadios'
 import { SearchInput } from '@/partials/SearchInput/SearchInput'
 import { WordDefinition } from '@/partials/WordDefinition/WordDefinition'
 
+export const dynamic = 'force-dynamic'
+
 export default async function Home({
 	params,
 	searchParams,
