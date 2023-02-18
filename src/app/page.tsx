@@ -27,6 +27,7 @@ export default async function Home({
       <div style={{ display: "flex" }}>
         <QueryModeRadios />
       </div>
+      {JSON.stringify(data, null , 2)}
       {data && data[0] ? <WordDefinition word={data[0]} /> : <NotFound />}
     </main>
   );
